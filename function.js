@@ -20,7 +20,7 @@ function log(message){
 }
 log('hello')
 
-//2. Parameters
+// 2. Parameters
 // primitive parameters: passed by value
 // object parameters: passed by reference 
 function changeName(obj) {
@@ -29,3 +29,35 @@ function changeName(obj) {
 const ellie = {name: 'ellie'};
 changeName(ellie);
 console.log(ellie);
+
+
+// 3. Default parameters (added in ES6)
+function showMessage(message, from = 'unknown') {
+    console.log(`${message} by ${from}`);
+}
+showMessage('hi!')
+
+
+// 4. Rest parameters (added in ES6)
+function printAll(...args){
+    for (let i = 0; i < args.length; i++) {
+        console.log(args[i]);
+    }
+    
+    for (const arg of args){
+        console.log(arg);
+    }
+
+    args.forEach((arg) => console.log(arg));
+}
+printAll('dream', 'coding', 'ellie');
+
+
+// 5. Local scope 
+let globalMessage = 'global'  // global variable
+function printMessage() {
+    let message = 'hello';
+    console.log(message);  // local variable 
+    console.log(globalMessage);
+}
+printMessage(); 
