@@ -140,17 +140,73 @@ randomQuiz('love you', printYes, printNo);
 // };
 
 const simplePrint = () => console.log('simplePrint!');
-const add = (a, b) => a + b;
+//const add = (a, b) => a + b;
 const simpleMultiply = (a, b) => {
     //do something more
     return a * b;
 };
 
 // IIFE: Immediately Invoked Function Expression
-(function hello() {
-    console.log('hello');
-})();
+// (function hello() {
+//     console.log('hello');
+// })();
 
 // fun quiz time 
 // function calculate(command, a, b)
 // command: add, subtract, divide, multiply, remainder
+
+
+// function add (a, b){
+//     console.log(a + b);
+// }
+
+add = (a,b) => console.log(a + b);
+add(1,2);
+
+// function subtract(a, b) {
+//     console.log(a - b);
+// }
+
+subtract = (a, b) => console.log(a - b);
+subtract(3, 2);
+
+// function divide (a, b) {
+//     console.log (a / b);
+// }
+
+divide = (a, b) => console.log(a / b);
+divide(12, 2);
+
+// function multiply (a, b) {
+//     console.log(a*b);
+// }
+multiply = (a, b) => console.log(a * b);
+multiply(2, 4)
+
+// function remainder(a, b) {
+//     console.log(a % b);
+// }
+remainder = (a, b) => console.log(a % b);
+remainder(3, 2)
+
+
+// Dreamcoding answer 
+
+function calculate(command, a, b) {
+    switch(command) {
+        case 'add':
+            return a + b;
+        case 'subtract':
+            return a - b;
+        case 'divide':
+            return a / b;
+        case 'multiply':
+            return a * b;
+        case ' remainder':
+            return a % b;
+        default:
+            throw Error('Unknown Command');
+    }
+}
+
+console.log(calculate('add', 12, 3))
