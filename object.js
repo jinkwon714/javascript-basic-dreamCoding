@@ -83,3 +83,33 @@ for (let i = 0; i < array.length; i++){
 for (value of array){
   console.log(value);
 }
+
+// 7. Fun cloning
+// Object.assign(dest, [obj1, obj2, obj3...])
+const user = { name: 'ellie', age: '20'};
+const user2 = user;
+console.log(user);
+
+// old way
+const user3 = {};
+for (key in user) {
+  user3[key] = user[key];
+}
+console.clear();
+console.log(user3);
+
+// Object.assign  - Javascript에 있는 모든 object는 Object를 상속
+const user4 = {};
+Object.assign(user4, user);
+console.log(user4);
+
+// 바로 위의 수식 아래처럼 줄여 사용 가능
+// const user4 = Object.assign({}, user);
+// console.log(user4)
+
+// another example
+const fruit1 = { color: 'red'};
+const fruit2 = { color: 'blue', size: 'big'};
+const mixed = Object.assign({}, fruit1, fruit2);
+console.log(mixed.color);
+console.log(mixed.size);
