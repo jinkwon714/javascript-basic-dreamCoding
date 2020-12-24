@@ -82,3 +82,4 @@ fruits.push('🍋')
 console.log(fruits);
 console.log(fruits.indexOf('🍋'));
 console.log(fruits.lastIndexOf('🍋'));
+

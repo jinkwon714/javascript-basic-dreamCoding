@@ -67,6 +67,7 @@ function printMessage() {
 }
 printMessage(); 
 
+
 // 6. Return a value 
 function sum(a, b){
     return a + b;

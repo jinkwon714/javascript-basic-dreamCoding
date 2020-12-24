@@ -47,8 +47,8 @@ const maxNumber = 5;
 
 const count = 17; // integer
 const size = 17.1; // decimal number
-console.log(`value: ${count}, type: ${count}`);
-console.log(`value:${size}, type: ${size}`);
+console.log(`value: ${count}, type: ${typeof count}`);
+console.log(`value: ${size}, type: ${typeof size}`);
 
 // number - special numeric values: infinit, -infinity, NaN(Not a Number)
 const infinity = 1 / 0;
@@ -61,7 +61,7 @@ console.log(nAn);
 // string 
 const char = 'c';
 const brendan = 'brendan';
-const greeting = 'hello' + ImageBitmapRenderingContext;
+const greeting = 'hello' + brendan;
 console.log(`value: ${greeting}, type: ${typeof greeting}`);
 const helloBob = `h1 ${brendan}!`;  // template literals (string)
 console.log(`value: ${helloBob}, type: ${typeof helloBob}`);
