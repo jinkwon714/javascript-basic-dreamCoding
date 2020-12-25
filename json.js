@@ -17,7 +17,7 @@ const rabbit = {
   size: null, 
   birthDate: new Date(),
   jump: () => {
-    console.log('${name} can jump!');
+    console.log(`${name} can jump!`);
   },
 };
 
@@ -33,3 +33,19 @@ console.log(json);
 
 // 2. JSON to Object
 // parse(JSON)
+
+console.clear();
+json = JSON.stringify(rabbit);
+//reviver 
+const obj = JSON.parse(json, (key, value) => {
+  console.log(`key: ${key}, value: ${value}`);
+  // return 값을 상세히 설정
+  return key === 'birthDate' ? new Date(value) : value;
+});
+console.log(obj);
+
+rabbit.jump();
+// obj.jumb();
+
+console.log(rabbit.birthDate.getDate());
+console.log(obj.birthDate.getDate())
